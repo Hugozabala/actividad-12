@@ -28,9 +28,9 @@ for i in range(cantidad):
     }
 
 print("ordenar empleado por paquetes entregados")
-paq_ordenado=quick_sort(list(repartidor.values()))
+paq_ordenado=quick_sort(list(repartidor.items()))
 for empleado in paq_ordenado:
-    datos = repartidor[empleado]
+    datos = empleado[empleado]
     print(f"\nempleado: {empleado}")
     print(f"Nombre: {datos['nombre']}")
     print(f"zona: {datos['zona']}")
