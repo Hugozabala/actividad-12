@@ -38,11 +38,11 @@ for empleado in paq_ordenado:
 
 
 print("\nBúsqueda de empleado")
-buscado = input("Ingrese el número de carnet que desea buscar: ")
+buscado = input("Ingrese codigo de empleado: ")
 
 if buscado in repartidor:
     emp = repartidor[buscado]
-    print("\nEstudiante encontrado:")
+    print("\nrepartidor:")
     print(f"Nombre: {emp['nombre']}")
     print(f"zona: {emp['zona']}")
     print(f"paquete: {emp['paquete']}")
