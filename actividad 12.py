@@ -8,6 +8,12 @@ def quick_sort(lista):
         mayores = [x for x in lista[1:] if x[1]['paquetes'] > pivote[1]['paquetes']]
         return quick_sort(menores) + iguales + quick_sort(mayores)
 
+def promedio_paquetes(diccionario):
+    if not diccionario:
+        return 0
+    total = sum([datos["paquetes"] for datos in diccionario.values()])
+    return total / len(diccionario)
+
 
 repartidor = {}
 cantidad = int(input("¿Cuántos repartidores desea ingresar? "))
@@ -47,3 +53,7 @@ if buscado in repartidor:
     print(f"Paquetes entregados: {emp['paquetes']}")
 else:
     print("Repartidor no encontrado.")
+
+
+promedio = promedio_paquetes(repartidor)
+print(f"\n--- Promedio de paquetes entregados: {promedio:.2f} ---")
